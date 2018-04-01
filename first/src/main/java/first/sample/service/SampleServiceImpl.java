@@ -23,5 +23,30 @@ public class SampleServiceImpl implements SampleService {
 		return sampleDAO.selectBoardList(map);
 	}
 	
+	@Override
+	public void insertBoard(Map<String, Object> map) throws Exception{
+		sampleDAO.insertBoard(map);
+	}
+
+	@Override
+	public Map<String, Object> selectBoardDetail(Map<String, Object> map) throws Exception {
+		// TODO Auto-generated method stub
+		sampleDAO.updateHitCnt(map);
+		Map<String, Object> resultMap = sampleDAO.selectBoardDetail(map);
+		return resultMap;
+	}
+
+	@Override
+	public void updateBoard(Map<String, Object> map) throws Exception {
+		// TODO Auto-generated method stub
+		sampleDAO.updateBoard(map);
+		
+	}
+
+	@Override
+	public void deleteBoard(Map<String, Object> map) throws Exception {
+		// TODO Auto-generated method stub
+		sampleDAO.deleteBoard(map);
+	}
 
 }
