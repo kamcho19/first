@@ -16,7 +16,7 @@
         <tbody>
             <tr>
                 <th scope="row">글 번호</th>
-                <td>${map.TITLE }</td>
+                <td>${map.IDX }</td>
                 <th scope="row">조회수</th>
                 <td>${map.HIT_CNT }</td>
             </tr>
@@ -36,20 +36,19 @@
             <tr>
                 <th scope="row">첨부파일</th>
                 <td colspan="3">
-                	<c:choose>
-	                	<c:when test="${fn:length(list) > 0 }">
-		                    <c:forEach var="row" items="${list }">
-		                        <input type="hidden" id="IDX" value="${row.IDX }">
-		                        <a href="#this" name="file">${row.ORIGINAL_FILE_NAME }</a>
-		                        (${row.FILE_SIZE }kb)
-		                    </c:forEach>
-	                    </c:when>
-	                    <c:otherwise>
-		                    <tr>
-		                    	<td colspan="4">조회된 결과가 없습니다.</td>
-							</tr>
-	                    </c:otherwise>
-                    </c:choose>
+               	<c:choose>
+                	<c:when test="${fn:length(list) > 0 }">
+	                    <c:forEach var="row" items="${list }">
+	                        <input type="hidden" id="IDX" value="${row.IDX }">
+	                        <a href="#this" name="file">${row.ORIGINAL_FILE_NAME }</a>
+	                        (${row.FILE_SIZE }kb)
+	                        <p />
+	                    </c:forEach>
+                    </c:when>
+                    <c:otherwise>
+	                    	조회된 결과가 없습니다.
+                    </c:otherwise>
+                </c:choose>
                 </td>
             </tr>            
         </tbody>
