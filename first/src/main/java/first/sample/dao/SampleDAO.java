@@ -42,6 +42,10 @@ public class SampleDAO extends AbstractDAO {
 		// TODO Auto-generated method stub
 		update("sample.deleteBoard", map);
 	}
+
+	public void insertFile(Map<String, Object> map) throws Exception{
+	    insert("sample.insertFile", map);
+	}	
 	
 	
 }
