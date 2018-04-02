@@ -180,6 +180,7 @@
 			<artifactId>ojdbc8</artifactId>
 			<version>12.2.0.1</version>
 		</dependency>
+		
 		<!-- 
 		<dependency>
 			<groupId>com.oracle.jdbc</groupId>
@@ -300,11 +301,17 @@
         </dependency>
          
         <!-- EgovProperty -->
-        <dependency>
+<!--         <dependency>
             <groupId>egovframework.rte</groupId>
             <artifactId>egovframework.rte.fdl.property</artifactId> 
             <version>2.7.0</version>
         </dependency>
+ -->        
+		<dependency>
+		    <groupId>egovframework.rte</groupId>
+		    <artifactId>egovframework.rte.ptl.mvc</artifactId>
+		    <version>3.5.0</version>
+		</dependency>        
          
         <!-- Log4j -->
         <dependency>

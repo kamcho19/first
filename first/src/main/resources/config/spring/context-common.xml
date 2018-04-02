@@ -20,4 +20,14 @@
         <property name="maxUploadSize" value="100000000" />
         <property name="maxInMemorySize" value="100000000" />
     </bean>
+    
+    <!-- paging  -->
+	<bean id="textRenderer" class="egovframework.rte.ptl.mvc.tags.ui.pagination.DefaultPaginationRenderer"/>  
+    <bean id="paginationManager" class="egovframework.rte.ptl.mvc.tags.ui.pagination.DefaultPaginationManager">
+        <property name="rendererType">
+            <map>
+                <entry key="text" value-ref="textRenderer"/>
+            </map>
+        </property>
+    </bean>    
 </beans>
