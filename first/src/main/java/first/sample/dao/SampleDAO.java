@@ -11,9 +11,9 @@ import first.common.dao.AbstractDAO;
 public class SampleDAO extends AbstractDAO {
 	
 	@SuppressWarnings("unchecked")
-	public Map<String, Object> selectBoardList(Map<String, Object> map) throws Exception {
+	public List<Map<String, Object>> selectBoardList(Map<String, Object> map) throws Exception {
 		// TODO Auto-generated method stub
-		return (Map<String, Object>)selectPagingList("sample.selectBoardList", map);
+		return (List<Map<String, Object>>)selectPagingList("sample.selectBoardList", map);
 	}
 
 	public void insertBoard(Map<String, Object> map) {
